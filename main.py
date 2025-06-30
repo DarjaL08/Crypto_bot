@@ -1,18 +1,18 @@
 import telebot
 from telebot import types
-from pycoingecko import CoinGeckoAPI
 from Token import key
+from Token import Coin_API
 import requests
 
 bot = telebot.TeleBot(key) 
 
 bot = telebot.TeleBot(key)
-CMC_API_KEY = '7c035194-3e71-49af-a826-9d1a46b14364'  
+API_KEY = 'Coin_API'  
 
 def get_price(symbol, currency='USD'):
     url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest'
     headers = {
-        'X-CMC_PRO_API_KEY': CMC_API_KEY
+        'X-CMC_PRO_API_KEY': API_KEY
     }
     params = {
         'symbol': symbol,
